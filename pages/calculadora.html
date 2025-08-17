@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="../styles/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="link">
+                <li><a href="../index.html">Create Account</a></li>
+                <li><a href="./pages/loggin.html">Log-in</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="calculadora">
+        <section class="hero">
+            <h1>Seleccione una Operación:</h1>
+            <select name="operaciones" id="operaciones" class="button">
+                <option value="1">Sumar</option>
+                <option value="2">Restar</option>
+                <option value="3">Multiplicar</option>
+                <option value="4">Dividir</option>
+            </select>
+        </section>
+        <section class="botones">
+            <div class="pantalla" id="pantalla">0</div>
+            <button data-numero="7">7</button>
+            <button data-numero="8">8</button>
+            <button data-numero="9">9</button>
+            <button data-numero="4">4</button>
+            <button data-numero="5">5</button>
+            <button data-numero="6">6</button>
+            <button data-numero="1">1</button>
+            <button data-numero="2">2</button>
+            <button data-numero="3">3</button>
+            <button id="cambiar"></button>
+            <button data-numero="0">0</button>
+            <button id="resultado">=</button>
+        </section>
+    </main>
+    <script src="../scripts/main3.js"></script>
+</body>
+
+</html>
