@@ -1,4 +1,4 @@
-const comparadorDePassword = (a, b, section) => {
+const comparador = (a, b, section) => {
   let flag = true;
   let mensajeError = section.querySelector(".error-password");
   if (!mensajeError) {
@@ -19,7 +19,7 @@ const comparadorDePassword = (a, b, section) => {
 };
 
 function Usuario(user, password, array) {
-  id = array.length;
+  this.id = array.length;
   this.user = user;
   this.password = password;
 }
@@ -41,7 +41,7 @@ document.getElementById("myForm").addEventListener("submit", (e) => {
   let password2 = document.getElementById("password2").value;
 
   if (password !== "" && password2 !== "" && user !== "") {
-    comparadorDePassword(password, password2, section);
+    comparador(password, password2, section);
     nuevo.textContent = "";
   } else {
     nuevo.textContent = "Rellene los campos faltantes";

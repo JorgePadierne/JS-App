@@ -61,7 +61,6 @@ label {
 }
 
 header {
-    width: 100%;
     background-color: #202020;
     padding: 30px;
 }
@@ -81,6 +80,12 @@ header nav ul li a {
 
 .calculadora {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.calculadora div {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -88,28 +93,36 @@ header nav ul li a {
 
 .botones {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: minmax(120px, auto) repeat(4, 70px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(120px, auto) repeat(5, 70px);
     gap: 1px;
     background-color: #333;
-    width: 20%;
+    width: 100%;
     padding: 20px;
     border-radius: 10px;
 }
 
+#main div {
+    padding: 30px;
+    border-radius: 5px;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+
 .botones button {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 80px repeat(4, 50px);
     gap: 1px;
     background-color: #f0f0f0;
     align-items: center;
     font-size: 30px;
     font-weight: 600;
+    border-radius: 5px;
 }
 
 .pantalla {
-    grid-column: span 3;
+    grid-column: span 4;
     background-color: #444;
     color: white;
     font-size: 1.5rem;
@@ -124,12 +137,6 @@ header nav ul li a {
     justify-content: space-around;
     align-items: center;
     margin: 20px;
-}
-
-.hero select {
-    margin-left: 30px;
-    padding: 10px;
-    font-size: 15px;
 }
 
 .button {

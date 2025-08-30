@@ -21,30 +21,39 @@
         </nav>
     </header>
     <main class="calculadora">
-        <section class="hero">
-            <h1>Seleccione una Operación:</h1>
-            <select name="operaciones" id="operaciones" class="button">
-                <option value="1">Sumar</option>
-                <option value="2">Restar</option>
-                <option value="3">Multiplicar</option>
-                <option value="4">Dividir</option>
-            </select>
+        <section>
+            <h2>Historial de resultados</h2>
+            <div id="main">
+            </div>
         </section>
-        <section class="botones">
-            <div class="pantalla" id="pantalla">0</div>
-            <button data-numero="7">7</button>
-            <button data-numero="8">8</button>
-            <button data-numero="9">9</button>
-            <button data-numero="4">4</button>
-            <button data-numero="5">5</button>
-            <button data-numero="6">6</button>
-            <button data-numero="1">1</button>
-            <button data-numero="2">2</button>
-            <button data-numero="3">3</button>
-            <button id="cambiar"></button>
-            <button data-numero="0">0</button>
-            <button id="resultado">=</button>
-        </section>
+        <div>
+            <section class="hero">
+                <h1>Seleccione una Operación:</h1>
+            </section>
+            <section class="botones">
+                <div class="pantalla" id="pantalla">0</div>
+                <button id="porcentaje">%</button>
+                <button id="btnCE">CE</button>
+                <button id="btnC">C</button>
+                <button id="btnBorrar">⌫</button>
+                <button data-numero="7">7</button>
+                <button data-numero="8">8</button>
+                <button data-numero="9">9</button>
+                <button data-operador="/">/</button>
+                <button data-numero="4">4</button>
+                <button data-numero="5">5</button>
+                <button data-numero="6">6</button>
+                <button data-operador="-">-</button>
+                <button data-numero="1">1</button>
+                <button data-numero="2">2</button>
+                <button data-numero="3">3</button>
+                <button data-operador="*">*</button>
+                <button data-operador="+">+</button>
+                <button data-numero="0">0</button>
+                <button data-numero=".">.</button>
+                <button id="resultado">=</button>
+            </section>
+        </div>
     </main>
     <script src="../scripts/main3.js"></script>
 </body>
