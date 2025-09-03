@@ -121,6 +121,10 @@ header nav ul li a {
     border-radius: 5px;
 }
 
+.resultado {
+    width: 300px;
+}
+
 .pantalla {
     grid-column: span 4;
     background-color: #444;

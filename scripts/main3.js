@@ -29,9 +29,9 @@ const renderizarHistorial = () => {
 
   resultadosGuardados.forEach((resultado) => {
     resultados += `
-      <div>
+      <div class="resultado">
         <h3>${resultado.numero1} ${resultado.operacion} ${resultado.numero2} = ${resultado.resultado}</h3>
-        <button class="btn-eliminar" data-id="${resultado.id}">Borrar</button>
+        <button class="btn-eliminar button" data-id="${resultado.id}">Borrar</button>
       </div>`;
   });
 
@@ -48,6 +48,16 @@ const renderizarHistorial = () => {
 renderizarHistorial();
 
 const botonEliminar = (id) => {
+  Toastify({
+    text: "Eliminado ✔",
+    duration: 1000,
+    gravity: "bottom", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+  }).showToast();
   let resultadosGuardados = JSON.parse(localStorage.getItem("resultado")) || [];
   let resultadosFiltrados = resultadosGuardados.filter(
     (resultado) => resultado.id !== id
@@ -90,6 +100,17 @@ document.querySelectorAll("button[data-operador]").forEach((btn) => {
 
 document.getElementById("resultado").addEventListener("click", () => {
   if (entradaActual === "" || numero1 === null || !operacionActual) return;
+  Toastify({
+    text: "Sucessfull ✔",
+    duration: 1000,
+    gravity: "bottom", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+  }).showToast();
+
   numero2 = Number(entradaActual);
   let resultado;
   switch (operacionActual) {
@@ -172,3 +193,22 @@ document.getElementById("porcentaje").addEventListener("click", () => {
 });
 
 pantalla.textContent = "0";
+
+document.getElementById("cerrar").addEventListener("click", (e) => {
+  e.preventDefault();
+  Swal.fire({
+    title: "Do you want to log out?",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonText: "Yes",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire("Log out", "", "success");
+      setTimeout(() => {
+        window.location.href = "./loggin.html";
+      }, 1000);
+    } else if (result.isDenied) {
+      Swal.fire("Changes are not saved", "", "info");
+    }
+  });
+});
