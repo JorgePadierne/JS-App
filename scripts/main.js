@@ -90,7 +90,7 @@ document.getElementById("myForm").addEventListener("submit", async (e) => {
 
 async function cargarUsuariosRemotos() {
   try {
-    const response = await fetch("../data/usuarios.json");
+    const response = await fetch("./data/usuarios.json");
     const usuarios = await response.json();
     return usuarios;
   } catch (error) {
