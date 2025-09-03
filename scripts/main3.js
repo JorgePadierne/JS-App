@@ -156,13 +156,12 @@ document.getElementById("resultado").addEventListener("click", () => {
 });
 
 document.getElementById("btnCE").addEventListener("click", () => {
-  if (resultado) {
-    return;
-  }
   entradaActual = "";
   numero2 = null;
   pantalla.textContent =
-    numero1 === undefined ? "0" : `${numero1} ${operacionActual || ""}`;
+    numero1 === undefined || operacionActual === null
+      ? "0"
+      : `${numero1} ${operacionActual || ""}`;
 });
 
 document.getElementById("btnC").addEventListener("click", () => {
