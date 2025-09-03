@@ -204,7 +204,7 @@ document.getElementById("cerrar").addEventListener("click", (e) => {
     if (result.isConfirmed) {
       Swal.fire("Log out", "", "success");
       setTimeout(() => {
-        window.location.href = "./loggin.html";
+        window.location.href = "./log-in.html";
       }, 1000);
     } else if (result.isDenied) {
       Swal.fire("Changes are not saved", "", "info");
