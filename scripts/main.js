@@ -67,7 +67,9 @@ document.getElementById("myForm").addEventListener("submit", async (e) => {
           duration: 3000,
           gravity: "top",
           position: "center",
-          backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+          style: {
+            background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+          },
         }).showToast();
         return;
       }
@@ -90,7 +92,7 @@ document.getElementById("myForm").addEventListener("submit", async (e) => {
 
 async function cargarUsuariosRemotos() {
   try {
-    const response = await fetch("./data/usuarios.json");
+    const response = await fetch("data/usuarios.json");
     const usuarios = await response.json();
     return usuarios;
   } catch (error) {
@@ -99,7 +101,9 @@ async function cargarUsuariosRemotos() {
       duration: 3000,
       gravity: "top",
       position: "center",
-      backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+      style: {
+        background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+      },
     }).showToast();
     return [];
   }
@@ -122,7 +126,9 @@ async function login(username, password) {
       duration: 3000,
       gravity: "top",
       position: "center",
-      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
     }).showToast();
   } else {
     Toastify({

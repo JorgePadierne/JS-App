@@ -62,7 +62,9 @@ async function cargarUsuariosRemotos() {
       duration: 3000,
       gravity: "top",
       position: "center",
-      backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+      style: {
+        background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+      },
     }).showToast();
     return [];
   }
@@ -85,7 +87,9 @@ async function login(username, password) {
       duration: 3000,
       gravity: "top",
       position: "center",
-      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
     }).showToast();
   } else {
     Toastify({
@@ -93,7 +97,9 @@ async function login(username, password) {
       duration: 3000,
       gravity: "top",
       position: "center",
-      backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+      style: {
+        background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+      },
     }).showToast();
   }
 }
@@ -123,7 +129,9 @@ async function registrar(username, password) {
       duration: 3000,
       gravity: "top",
       position: "center",
-      backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+      style: {
+        background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+      },
     }).showToast();
     return;
   }
