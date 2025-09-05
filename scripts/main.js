@@ -90,7 +90,7 @@ document.getElementById("myForm").addEventListener("submit", async (e) => {
   }
 });
 
-async function cargarUsuariosRemotos() {
+async function cargarUsuarios() {
   try {
     const response = await fetch("data/usuarios.json");
     const usuarios = await response.json();
@@ -110,7 +110,7 @@ async function cargarUsuariosRemotos() {
 }
 
 async function login(username, password) {
-  const usuariosRemotos = await cargarUsuariosRemotos();
+  const usuariosRemotos = await cargarUsuarios();
   const usuariosLocales = JSON.parse(
     localStorage.getItem("usuariosExtra") || "[]"
   );
@@ -143,7 +143,7 @@ async function login(username, password) {
 
 async function validarUsuarioExistente(username) {
   const usernameNorm = username.trim().toLowerCase();
-  const usuariosRemotos = await cargarUsuariosRemotos();
+  const usuariosRemotos = await cargarUsuarios();
   const usuariosLocales = JSON.parse(
     localStorage.getItem("usuariosExtra") || "[]"
   );
